@@ -1,0 +1,33 @@
+.background {
+    width: 300px;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sunny-background {
+    background-image: url("../../assets/sunny.jpg");    
+}
+
+.cloudy-background {
+    background-image: url("../../assets/cloudy.jpg");
+}
+
+.snowing-background {
+    background-image: url("../../assets/snowing.jpg");    
+}
+
+.raining-background {
+    background-image: url("../../assets/raining.jpg");
+}
+
+.partly-cloudy-background {
+    background-image: url("../../assets/partly-cloudy.jpg");
+}
+
+.weather-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
