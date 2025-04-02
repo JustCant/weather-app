@@ -4,16 +4,21 @@ import { ICurrentWeather } from "../../App";
 
 type BackgroundTypes = 'sunny-background' | 'cloudy-background' | 'partly-cloudy-background' | 'raining-background' | 'snowing-background';
 
-const CurrentWeather = ({ weather, location, temperature }: ICurrentWeather) => {
+interface ICurrentWeatherProps {
+    currentWeather: ICurrentWeather
+}
+
+const CurrentWeather = ({ currentWeather }: ICurrentWeatherProps) => {
+    const { weather, location, temperature, icon } = currentWeather;
     const [background, setBackGround] = useState<BackgroundTypes>('sunny-background');
 
     switch(weather) {
-        case 'sunny':
+        case 'Sunny':
             if (background !== 'sunny-background') {
                 setBackGround('sunny-background');
             }
             break;
-        case 'cloudy':
+        case 'Overcast':
             if (background !== 'cloudy-background') {
                 setBackGround('cloudy-background');
             }
@@ -40,7 +45,8 @@ const CurrentWeather = ({ weather, location, temperature }: ICurrentWeather) => 
     return (
         <>
             <div className={'weather-container background ' + background}>
-                <div>{weather}</div>
+                <div>{weather} </div>
+                <img src={icon}></img>
                 <div>{location}</div>
                 <div>{temperature}°</div>
             </div>
