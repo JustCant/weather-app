@@ -1,0 +1,24 @@
+.hours-grid {
+    display: flex;
+    width: 1000px;
+    overflow-x: scroll; /* Enable horizontal scrolling */
+    white-space: nowrap; 
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: lightblue; 
+}
+
+.hour {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: solid 1px black;
+    border-radius: 5px;
+    margin-right: 5px;
+    background-color: white;
+}
+
+.time {
+    font-size: small;
+}
